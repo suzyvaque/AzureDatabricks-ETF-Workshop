@@ -11,13 +11,15 @@ SELECT
   etf_name,
   idx_ind_nm,
   COUNT(DISTINCT customer_id) AS holder_cnt
-FROM cat_adb_workshop.sch_user0_gold.vw_customer_portfolio_daily
+FROM cat_adb_workshop.sch_gold.vw_customer_portfolio_daily
 WHERE qty > 0
   AND etf_name IS NOT NULL
 GROUP BY bas_dd, etf_code, etf_name, idx_ind_nm
 ORDER BY holder_cnt DESC
 LIMIT 10;
 ```
+
+* 필요 시 본인의 워크스페이스 설정에 맞게 카탈로그와 스키마 이름을 변경합니다.
 
 ## 2. SQL Dashboard
 

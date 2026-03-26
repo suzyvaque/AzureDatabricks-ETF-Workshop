@@ -1,11 +1,3 @@
-# Databricks notebook source
-# MAGIC %md
-# MAGIC # ETF Structured Pipeline Main
-# MAGIC 이 노트북은 `usernumber`만 파라미터로 받아 bronze append → silver append → gold view 생성까지 한 번에 수행합니다.
-# MAGIC
-
-# COMMAND ----------
-
 dbutils.widgets.text("usernumber", "0")
 usernumber = dbutils.widgets.get("usernumber")
 

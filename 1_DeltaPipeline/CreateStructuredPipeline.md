@@ -2,10 +2,7 @@
 
 ## 1. 구성
 
-- Databricks Job 1개
-- Task 1개
-- Notebook 1개 (`main_pipeline`)
-- Job Trigger: File Arrival Trigger
+접근 가능한 ADLS 스토리지에서, "landing"이라는 이름의 Container를 생성합니다.
 
 ---
 
@@ -74,6 +71,7 @@
 2. 파라미터 조정
    - `abfss://landing@adlsworkshopadb.dfs.core.windows.net/data/customer_cash_portfolio/` 경로 지정
    - 10분 간격, 1분 후 실행 지정
+   - 필요에 따라 경로의 스토리지 이름 업데이트
 
 3. 데이터 추가 생성
    - `create_data`에서 일주일치 데이터 추가 생성
