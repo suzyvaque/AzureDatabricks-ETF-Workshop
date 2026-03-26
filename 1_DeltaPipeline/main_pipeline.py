@@ -4,7 +4,7 @@ usernumber = dbutils.widgets.get("usernumber")
 dbutils.widgets.text("storage_account", "adlsworkshopadb")
 storage_account = dbutils.widgets.get("storage_account")
 
-# adls_access_key = "REMOVED_SECRET" # TODO
+dbutils.widgets.text("adls_access_key", "")
 adls_access_key = dbutils.widgets.get("adls_access_key")
 
 spark.conf.set(

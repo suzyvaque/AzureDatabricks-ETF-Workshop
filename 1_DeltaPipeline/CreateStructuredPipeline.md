@@ -49,12 +49,17 @@ Databricks Job을 구성해 정형 데이터 처리 파이프라인을 실행합
 
 ## 3. 실행 방법
 
+0. utilities.common_utils 변경
+    - CATALOG 이름 변경
+    - LANDING_BASE 스토리지 이름 변경
 1. Databricks Pipeline 실행
    - Task에서 `main_pipeline` Notebook 선택
+   - Compute에서 생성한 All Purpose Compute 선택
 
 2. 파라미터 입력
    - `usernumber`
    - `adls_access_key`
+   - `storage_account`
 
 3. Pipeline 실행
    - `Run Now` 클릭

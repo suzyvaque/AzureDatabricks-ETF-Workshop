@@ -1,13 +1,13 @@
 from pyspark.sql import SparkSession
 
-from utilities.common_utils import gold_view_name
+from utilities.common_utils import gold_view_name, Env
 from utilities.gold_utils import create_gold_schema
 
 
 def build_gold_views(spark: SparkSession, usernumber: str) -> None:
     create_gold_schema(spark, usernumber)
 
-    silver_schema = f"cat_adb_workshop.sch_user{usernumber}_silver"
+    silver_schema = f"{Env.CATALOG}.sch_user{usernumber}_silver"
 
     spark.sql(f"""
     CREATE OR REPLACE VIEW {gold_view_name(usernumber, "vw_customer_portfolio_daily")} AS
