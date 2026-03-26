@@ -8,21 +8,22 @@ External Location Path를 unstructured로 지정합니다.
 
 ## 2. Parsing 및 Chunking
 
-parsing_and_chunking.ipynb 노트북을 실행합니다.
+[Parsing and Chunking Notebook](./Parsing_and_Chunking.ipynb)을 실행합니다.
 
-(PDF → 텍스트 파싱 후 Chunk 단위로 분할)
+* PDF → 텍스트 파싱
+* Chunk 단위로 분할
 
 ### 주의사항
 
 다음 단계에서 임베딩 코드를 작성하는 대신, Databricks Vector Search UI를 활용해 델타 싱크 방식으로 임베딩 및 인덱싱합니다.
 
-참고: https://docs.databricks.com/aws/en/vector-search/create-vector-search
+* [공식 문서 참고](https://docs.databricks.com/aws/en/vector-search/create-vector-search)
 
 ## 3. Change Data Feed 설정
 
 Vector Search 인덱싱을 위해 Chunk 테이블에 CDF 활성화가 필요합니다.
 
-Vector Search Noteboo에서 다음 설정을 적용합니다.
+[Vector Search Notebook](./Vector_Search.ipynb)에서 다음 설정을 적용합니다.
 
 ```
 ALTER TABLE <chunk_table_name>
@@ -46,9 +47,7 @@ Create Index 선택 후 Chunk 테이블을 지정합니다.
 
 ## 5. Playground 테스트
 
-Index 생성 완료 후 Try in Playground에서 RAG를 테스트할 수 있습니다.
-
-(LLM 기반 Retrieval + Generation 자동 수행)
+Index 생성 완료 후 Try in Playground에서 RAG를 테스트할 수 있습니다. (LLM 기반 Retrieval + Generation 자동 수행)
 
 ### 예시 질문
 

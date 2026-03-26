@@ -28,7 +28,7 @@ ETF 데이터를 기반으로 다음을 구현합니다.
 
 ## Quick Start
 
-아래 순서대로 진행해 주시면 됩니다.
+아래 순서대로 진행합니다.
 
 ---
 
@@ -42,29 +42,29 @@ ETF 데이터를 기반으로 다음을 구현합니다.
 
 ### 2. 정형 데이터 파이프라인 실행
 
+[정형 데이터 파이프라인 가이드](./1_DeltaPipeline/CreateStructuredPipeline.md)
+
 - Lakeflow Pipeline 기반 Medallion Architecture 구성
 - Bronze → Silver → Gold 데이터 처리
-
-[정형 데이터 파이프라인 가이드](./CreateStructuredPipeline.md)
 
 ---
 
 ### 3. SQL 워크로드 (BI + Genie)
 
+[SQL 워크로드 가이드](./2_SQLWorkloads/SQLWorkload.md)
+
 - Gold 데이터 Query
 - BI Dashboard 생성
 - Genie Text-to-SQL 활용
-
-[SQL 워크로드 가이드](./SQLWorkload.md)
 
 ---
 
 ### 4. 비정형 데이터 처리 (RAG)
 
+[RAG 파이프라인 가이드](./3_VectorPipeline/CreateRAG.md)
+
 - PDF 파싱 및 Chunking
 - Embedding 생성
 - Vector Search 및 LLM 질의응답
-
-[RAG 파이프라인 가이드](./CreateRAG.md)
 
 ---
