@@ -15,7 +15,9 @@ Databricks에서 Job을 생성합니다.
 
 ## 2. Compute 설정
 
-사전에 생성해둔 All Purpose Compute를 연결합니다.
+**All Purpose Compute**를 생성해 연결합니다.
+
+(Single node: Standard_D4ds_v5, Terminate after 300 minutes of inactivity)
 
 * install_requirements 노트북에 해당 Compute를 연결해 노트북을 실행합니다.
 * 필요한 라이브러리를 미리 설치해, 서버리스 환경에서 매번 faker 등을 로드하지 않도록 하기 위함입니다.
@@ -24,10 +26,10 @@ Databricks에서 Job을 생성합니다.
 
 다음 파라미터를 설정합니다.
 
-* default_start_date
-* default_end_date
-* krx_auth_key
-* adls_access_key
+* default_start_date: 2026_01_01
+* default_end_date: 2026_02_28
+* krx_auth_key: 워크스페이스의 txt 파일 참고
+* adls_access_key: 스토리지에서 확인
 
 ## 4. Job 실행
 
