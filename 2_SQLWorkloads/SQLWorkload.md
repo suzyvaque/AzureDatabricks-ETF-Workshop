@@ -2,6 +2,22 @@
 
 ## 1. SQL Query
 
+고객 중 보유자 수가 많은 ETF를 확인합니다.
+
+```
+SELECT
+  bas_dd,
+  etf_code,
+  etf_name,
+  idx_ind_nm,
+  COUNT(DISTINCT customer_id) AS holder_cnt
+FROM cat_adb_workshop.sch_user0_gold.vw_customer_portfolio_daily
+WHERE qty > 0
+  AND etf_name IS NOT NULL
+GROUP BY bas_dd, etf_code, etf_name, idx_ind_nm
+ORDER BY holder_cnt DESC
+LIMIT 10;
+```
 
 ## 2. SQL Dashboard
 
